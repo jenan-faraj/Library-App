@@ -1,12 +1,33 @@
-import React, { Component } from 'react';
+// import React, { Component } from "react";
 
-class Main extends Component {
-  render() {
+// class Main extends Component {
+//   render() {
+//     return (
+//       <main>
+//         <h2>Book List</h2>
+//         <div className="book-list">
+//           {this.props.books.map((book) => (
+//             <div key={book.id} className="card">
+//               <h3>{book.title}</h3>
+//               <p>Author: {book.author}</p>
+//               <p>ISBN: {book.isbn}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </main>
+//     );
+//   }
+// }
+
+// export default Main;
+import React from "react";
+
+function Main(props) {
     return (
       <main>
         <h2>Book List</h2>
         <div className="book-list">
-          {this.props.books.map((book) => (
+          {props.books.map((book) => (
             <div key={book.id} className="card">
               <h3>{book.title}</h3>
               <p>Author: {book.author}</p>
@@ -16,7 +37,7 @@ class Main extends Component {
         </div>
       </main>
     );
-  }
+  
 }
 
 export default Main;
